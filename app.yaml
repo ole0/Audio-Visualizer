@@ -1,0 +1,11 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /
+  static_files: website/audio.html
+  upload: website/audio.html
+
+- url: /
+  static_dir: website

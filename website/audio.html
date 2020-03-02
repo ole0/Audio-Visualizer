@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html> 
+    <head> 
+        <style>
+                html, body {
+                    width: 100%;
+                    height: 100%;
+                    margin: 0px;
+                    border: 0;
+                    overflow: hidden; /*  Disable scrollbars */
+                    display: block;  /* No floating content on sides */
+                }
+                #oscilloscope {
+                    z-index: -5
+                }
+                #audioUpload {
+                    z-index: 5;
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    /* bring your own prefixes */
+                    transform: translate(-50%, -50%);
+                }
+                #audioUploadLabel {
+                    z-index: 5;
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    /* bring your own prefixes */
+                    transform: translate(-50%, -50%);
+                }
+                #fullDiv {
+                    z-index: 10;
+                    width: 100%;
+                    height: 100%;
+                    margin: 0px;
+                    border: 0;
+                    overflow: hidden; /*  Disable scrollbars */
+                    display: block;
+                }
+        </style>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+        <title>Beispiel</title> 
+    </head> 
+    <body> 
+            <label id='audioUploadLabel' for='audioUpload' class='btn'>audiodatei auswählen</label>
+            <input id='audioUpload' type='file' accept='audio/*' style='display: none'>
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/ratchet/2.0.2/css/ratchet.css" rel="stylesheet"/>
+            <canvas id='oscilloscope' style='position:absolute; left:0px; top:0px;'>
+            </canvas>
+            <script src='audio.js'></script>
+    </body> 
+</html>
+
+
+
